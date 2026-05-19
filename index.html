@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tennis Academy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <header>
+
+        <div class="logo">
+            Tennis Academy
+        </div>
+
+        <nav>
+
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="product.html">Treninzi</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>Postani bolji u tenisu</h1>
+
+            <p>
+                Nauči profesionalne tehnike,
+                unapredi kondiciju i dominiraj na terenu.
+            </p>
+
+            <a href="product.html" class="btn">
+                Pogledaj treninge
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="about">
+
+        <div class="about-text">
+
+            <h2>Profesionalni treninzi</h2>
+
+            <p>
+                Naši programi treninga namenjeni su
+                početnicima i profesionalnim igračima.
+            </p>
+
+            <p>
+                Fokus je na tehnici, brzini,
+                koordinaciji i mentalnoj pripremi.
+            </p>
+            <p>
+    Naši programi treninga namenjeni su
+    početnicima i profesionalnim igračima.
+</p>
+
+<p>
+    Fokus je na tehnici, brzini,
+    koordinaciji i mentalnoj pripremi.
+</p>
+
+<p>
+    Treninzi su osmišljeni tako da svaki igrač
+    postepeno razvija sigurnost, preciznost i kontrolu na terenu.
+</p>
+
+<p>
+    Kroz individualni pristup i moderne metode rada,
+    pomažemo igračima da dostignu svoj maksimum.
+</p>
+
+<p>
+    Program uključuje kondicione vežbe,
+    taktičku pripremu i unapređenje svih segmenata igre.
+</p>
+
+<p>
+    Bez obzira na nivo iskustva,
+    cilj akademije je konstantan napredak i razvoj pobedničkog mentaliteta.
+</p>
+
+        </div>
+
+        <div class="about-image">
+
+            
+            <img src="/media/istockphoto-463803307-612x612.jpg" alt="Training">
+
+        </div>
+
+    </section>
+
+
+    <section class="cards-section">
+
+        <h2>Zašto izabrati nas?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                
+               
+
+
+                <h3>Tehnika</h3>
+                
+
+                <p>
+                    Učenje forhenda,
+                    bekhenda i servisa.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Kondicija</h3>
+
+                <p>
+                    Vežbe za brzinu,
+                    snagu i izdržljivost.
+                </p>
+                
+            </div>
+
+            <div class="card">
+
+                <h3>Mentalitet</h3>
+
+                <p>
+                    Razvoj fokusa i
+                    pobedničkog razmišljanja.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <footer>
+
+        <p>
+            © 2026 Tennis Academy
+        </p>
+
+    </footer>
+    
+
+<div class="chatbot-container">
+
+    <div class="chatbot-header">
+        Tennis Bot 🎾
+    </div>
+
+    <div class="chatbot-messages" id="chatMessages">
+
+        <div class="bot-message">
+            Ćao! Kako mogu da ti pomognem?
+        </div>
+
+    </div>
+
+    <div class="chatbot-input">
+
+        <input type="text" id="userInput" placeholder="Postavi pitanje...">
+
+        <button onclick="sendMessage()">
+            Pošalji
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function sendMessage() {
+
+    let input = document.getElementById("userInput");
+
+    let message = input.value.toLowerCase();
+
+    let chatMessages = document.getElementById("chatMessages");
+
+    if(message.trim() === "") {
+        return;
+    }
+
+    
+
+    let userDiv = document.createElement("div");
+
+    userDiv.classList.add("user-message");
+
+    userDiv.innerText = input.value;
+
+    chatMessages.appendChild(userDiv);
+
+
+    let botDiv = document.createElement("div");
+
+    botDiv.classList.add("bot-message");
+
+    if(message.includes("servis")) {
+
+        botDiv.innerText =
+        "Za bolji servis fokusiraj se na izbačaj loptice i pravilan položaj tela.";
+
+    }
+
+    else if(message.includes("forhend")) {
+
+        botDiv.innerText =
+        "Forhend se poboljšava pravilnim radom nogu i rotacijom tela.";
+
+    }
+
+    else if(message.includes("bekhend")) {
+
+        botDiv.innerText =
+        "Kod bekhenda je veoma važan balans i kontrola reketa.";
+
+    }
+
+    else if(message.includes("kondicija")) {
+
+        botDiv.innerText =
+        "Za bolju kondiciju preporučujemo sprint treninge i vežbe izdržljivosti.";
+
+    }
+
+    else if(message.includes("trening")) {
+
+        botDiv.innerText =
+        "Najbolji rezultati dolaze uz redovne treninge najmanje 3 puta nedeljno.";
+
+    }
+
+    else if(message.includes("cao") || message.includes("zdravo")) {
+
+        botDiv.innerText =
+        "Zdravo! Spreman sam da ti pomognem oko tenisa 🎾";
+
+    }
+    else if(message.includes("koliko traje trening")) {
+
+    botDiv.innerText =
+    "Jedan trening traje između 60 i 90 minuta u zavisnosti od nivoa.";
+
+}
+
+else if(message.includes("koliko kosta")) {
+
+    botDiv.innerText =
+    "Cena treninga zavisi od programa i broja termina nedeljno.";
+
+}
+
+else if(message.includes("oprema")) {
+
+    botDiv.innerText =
+    "Za trening su potrebni reket, sportska garderoba i patike za tenis.";
+
+}
+
+else if(message.includes("turnir")) {
+
+    botDiv.innerText =
+    "Napredni i profesionalni igrači imaju mogućnost pripreme za turnire.";
+
+}
+
+else if(message.includes("reket")) {
+
+    botDiv.innerText =
+    "Početnicima preporučujemo lakše rekete sa većom glavom za bolju kontrolu.";
+
+}
+
+else if(message.includes("koliko puta")) {
+
+    botDiv.innerText =
+    "Preporučujemo minimum 3 treninga nedeljno za brži napredak.";
+
+}
+
+else if(message.includes("da li ima za decu")) {
+
+    botDiv.innerText =
+    "Da, akademija organizuje posebne programe treninga za decu.";
+
+}
+
+else if(message.includes("fizicka sprema")) {
+
+    botDiv.innerText =
+    "Fizička sprema je veoma važna jer tenis zahteva brzinu i izdržljivost.";
+
+}
+
+else if(message.includes("mentalna snaga")) {
+
+    botDiv.innerText =
+    "Mentalna snaga pomaže igračima da ostanu fokusirani tokom važnih poena.";
+
+}
+
+else if(message.includes("najbolji igrac")) {
+
+    botDiv.innerText =
+    "Mnogo igrača je obeležilo tenis, ali Novak Đoković je jedan od najvećih svih vremena 🎾";
+
+}
+
+else if(message.includes("novak")) {
+
+    botDiv.innerText =
+    "Novak Đoković je poznat po disciplini, izdržljivosti i mentalnoj snazi.";
+
+}
+
+else if(message.includes("hvala")) {
+
+    botDiv.innerText =
+    "Nema na čemu 🎾 Želimo ti uspešne treninge!";
+
+}
+
+    else {
+
+        botDiv.innerText =
+        "Trenutno nemam odgovor na to pitanje, ali nastavi sa treningom 🎾";
+
+    }
+
+    chatMessages.appendChild(botDiv);
+
+
+    input.value = "";
+
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+</script>
+
+</body>
+</html>
